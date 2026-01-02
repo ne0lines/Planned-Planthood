@@ -1,56 +1,137 @@
-# Inlämningsuppgift Planned Planthood
-Uppgiften är att göra en sida enligt nedanstående bilder, text och kod-stycken.
+# Planned Planthood 🌱
 
-## Inlämning
-* Code review är efter lunch fredagen den 2/1.
-* Senaste tiden för inlämning är kl. 8.00 måndagen den 5/1. Det som kommer efter det bedömmer vi inte om det inte finns rimliga skäl. 
-* Ni lämnar in genom att pusha till er GitHub med namnet "Planned Planthood".
-* När ni pushat upp sista ändringen skriver ni lärarchatten i lärarchatten och meddelar oss med länk till koden. Om ni inte meddelar bedömmer vi den i det skick den är vid deadline, commits efter detta kommer ignoreras.
-  
-## Krav
-* Klona detta repo och använd som grund.
-* Använd de variabler ni anser aktuella av de ni får i style.css som grund för sidans design
-* Ni ska lösa uppgiften enligt den design som anges i bilderna
-* Sidan ska vara responsiv i övergångarna mellan mobil-tablet-desktop
-* Formulär och semantik ska vara tillgängligt (använd WAVE eller dylikt för att testa)
-* Koden ska vara välformatterad och tydligt strukturerad med en genomtänkt namngivning på klasser samt ev kommentarer
-* Inga bibliotek som react, bootstrap, tailwind eller dylikt får användas, endast .CSS och .HTML (ev js).
-* Om ni lånar en reset, flow-util, visually-hidden eller dylikt som inte finns i grundkoden - ange källa som kommentar i er kod.
-* Var beredd på att förklara er kod muntligt så se till att ni förstår vad ni gör om ni rådfrågar andra/AI.
+En community-webbplats för urbana odlare som delar kunskap, tips och erfarenheter om växter och odling i stadsmiljö.
 
-## Extra
-Följande är extra och sådant ni inte måste ha med om ni inte hinner/vill/kan
+## Projektstruktur
 
-* Overlay/watermark-bilden med krukan kortens bild
-* Galleriet högst upp kan ha en enklare design som i tablet-läget även på desktop
-* Olika färger på "tags" behövs inte om ni inte vill, använd bara den gröna accent-color på alla i så fall.
-* Använd gärna en diskret transition på hover/focus-visible om ni vill.
-* Hamburgar-menyn behöver ni bara göra som en ikon, all annan funktionalitet är superextra och inget som vi förväntar oss att ni gör!
-  
-## Övriga resurser
-* Använd gärna avatarer från [https://avatar-placeholder.iran.liara.run/avatars](https://avatar-placeholder.iran.liara.run/avatars) eller den svg som finns i projektet.
-* Använd gärna bilder från [https://picsum.photos/](https://picsum.photos/). Vill ni använda andra är det ok, men se till att det ser bra ut i sammanhanget.
-* Vill ni ändra texter och lägga in egen info är det också ok, bara det fyller samma typ av funktion och inte ändrar sidans utseende bortom innehållet.
-* SVG finns i mappen assets/Images och kan användas antingen som vanliga bilder eller direkt inkopierade som HTML i koden. Om ni vill ändra färger med CSS på SVG måste de vara inkopierade inline. Se här för hur man kan ändra färger med CSS: https://nucleoapp.com/blog/post/change-svg-color-css
-* Länkarna ska vara semantiska men behöver inte gå någonstans (använd href="#")
-  
-## Design
-### Desktop
-Bilderna för designen ligger under Design mappen och innehåller bilder för de olika vyerna samt bild för hover state.
+```
+Planned Planthood/
+├── index.html          # Huvudsida
+├── style.css           # Stilmall
+├── README.md           # Dokumentation
+└── assets/
+    └── images/         # Bilder och ikoner
+        ├── logo-*.svg      # Logotyper
+        ├── icon-*.svg      # Ikoner
+        ├── img-*.jpg       # Galleribilder
+        └── plant-*.jpg     # Växtbilder
+```
 
-![Desktop](Design/desktop.png "Desktop")
+## HTML-struktur
 
-### Tablet
-Bilderna för designen ligger under Design mappen och innehåller bilder för de olika vyerna samt bild för hover state.
+Sidan är byggd med semantisk HTML5 och följer en tydlig hierarki:
 
-![Tablet](Design/tablet.png "Tablet")
+### Huvudlayout
+```html
+<body>
+  <main>
+    <header>    <!-- Sidhuvud med logotyp och navigation -->
+    <section>   <!-- Hero-sektion med bildgalleri -->
+    <section>   <!-- Nyhetsbrev-anmälan -->
+    <section>   <!-- Växtgrid med artikelkort -->
+    <section>   <!-- Historik-sektion -->
+    <footer>    <!-- Sidfot med kontaktinfo -->
+  </main>
+</body>
+```
 
-### Mobile
-Bilderna för designen ligger under Design mappen och innehåller bilder för de olika vyerna samt bild för hover state.
+### Sektioner
 
-![Mobile](Design/mobile.png "Mobile")
+| Sektion | Klass | Beskrivning |
+|---------|-------|-------------|
+| Header | `.site-header` | Logotyp, hamburger-meny (mobil) och huvudnavigation |
+| Hero | `.hero` | Rubrik, beskrivning och 6-bilders galleri |
+| Nyhetsbrev | `.nyhetsbrev` | Ikon och e-postformulär |
+| Växter | `.våra-växter` | Grid med växtkort (artikel-element) |
+| Historik | `.historik` | Tvåkolumnslayout med text och ikon |
+| Footer | `.page-footer` | Om oss-text, kontaktinfo och meny |
 
-## Hover state
-För hover state gäller generellt att det är inverterat om det är annat än länkar. Länkar har understrykning vid hover, annars inte.
+### Tillgänglighet (a11y)
+- `role`-attribut på semantiska element
+- `aria-label` och `aria-labelledby` för skärmläsare
+- Fokus-stilar med `outline` på interaktiva element
 
-![Hover](Design/PlannedPlanthood-Hover.png "Hover")
+## CSS-struktur
+
+Stilmallen är organiserad i logiska sektioner med kommentarer:
+
+### CSS Custom Properties (`:root`)
+
+**Typografi:**
+- `--fw-*` — Font-vikter (400–900)
+- `--fs-*` — Font-storlekar (0.625rem–3rem)
+- `--font-base` — Typsnittsfamilj (Open Sans)
+
+**Färger:**
+- `--clr-neutral-*` — Gråskala (100=vit → 900=nästan svart)
+- `--clr-green-*` — Gröna accentfärger
+- `--clr-accent` — Primär accentfärg
+- Tagg-färger för kategorier (flower, edible, decorative, etc.)
+
+**Layout:**
+- `--spacing-base` — Basenhet för spacing (1rem)
+- `--header-height` — Höjd på sidhuvud (48px)
+- `--gallery-row-height` — Höjd på gallerirader
+
+### Huvudsektioner i CSS
+
+1. **Reset & Base** — Box-sizing, margin-reset
+2. **Document settings** — HTML-nivå
+3. **Layout** — Main, header, section, footer
+4. **Media reset** — Bilder, listor, länkar
+5. **Typography** — Rubriker h1–h3
+6. **Utility** — `.width-limit` container
+7. **Header/navigation** — Logo och menystilar
+8. **Hero section** — Galleri med CSS Grid
+9. **Newsletter** — Formulärstilar
+10. **Plants grid** — Växtartiklar och meta-pills
+11. **History** — Tvåkolumnslayout
+12. **Footer** — Sidfotslayout
+13. **Responsive breakpoints** — Media queries
+
+### Responsiv design
+
+Tre breakpoints:
+
+| Breakpoint | Max-width | Anpassningar |
+|------------|-----------|--------------|
+| Desktop | >1200px | Fullbredd, 6-kolumns galleri, 4-kolumns växtgrid |
+| Tablet | ≤900px | 3-kolumns galleri, 3-kolumns växtgrid |
+| Mobil | ≤600px | 2-kolumns galleri, 1-kolumns växtgrid, hamburger-meny |
+
+### CSS-tekniker
+
+- **CSS Grid** — Bildgalleri och växtgrid
+- **Flexbox** — Header, navigation, layouter
+- **CSS Nesting** — Modern nested syntax
+- **Custom Properties** — Design tokens för färger/spacing
+- **Pseudo-element** — Hamburger-ikon (`::before`, `::after`), watermark-overlay
+- **Checkbox-hack** — Hamburger-meny utan JavaScript
+- **Backdrop-filter** — Blur-effekt på mobilmeny
+
+### Hamburger-meny (CSS-only)
+
+Menyn fungerar utan JavaScript genom en input=checkbox:
+
+```css
+/* Dold checkbox */
+>input.menu-toggle { display: none; }
+
+/* Label som klickbar ikon */
+>label.menu-toggle-label { /* hamburger-styling */ }
+
+/* Visa meny när checkbox är :checked */
+>input.menu-toggle:checked ~ nav.header-nav { display: flex; }
+```
+
+## Bilder
+
+- **Logotyper:** `logo-green.svg`, `logo-white.svg`
+- **Ikoner:** `icon-avatar.svg`, `icon-planting.svg`, `icon-phone.svg`, `icon-email.svg`, etc.
+- **Galleri:** `img-1.jpg` – `img-6.jpg`
+- **Växter:** `plant-01.jpg` – `plant-15.jpg`
+
+## Webbläsarstöd
+
+- Moderna webbläsare (Chrome, Firefox, Safari, Edge)
+- CSS Nesting kräver Chrome 120+, Firefox 117+, Safari 17.2+
