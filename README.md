@@ -123,6 +123,7 @@ Menyn fungerar utan JavaScript genom en input=checkbox:
 /* Visa meny när checkbox är :checked */
 >input.menu-toggle:checked ~ nav.header-nav { display: flex; }
 ```
+*Credit till **Petra Paulin** för idén om att animera "barsen" för hamburgermenyn till att utgöra korset.*
 
 ## Bilder
 
