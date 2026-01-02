@@ -418,6 +418,21 @@ section.våra-växter{
             width:100%;
             border:1px solid var(--clr-primary-light-2);
             >a{
+                position: relative;
+                display: block;
+                &::after{
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-image: url('assets/images/icon-watermark.svg');
+                    background-size: 30%;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    opacity: 0.25;
+                }
                 >img{
                     aspect-ratio:1/1;
                     object-fit:cover;
