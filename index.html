@@ -11,6 +11,10 @@
     <main role="main">
         <header class="site-header width-limit" role="banner">
             <a href="/" class="site-logo">PLANNED PLANTHOOD</a>
+            <input type="checkbox" id="menu-toggle" class="menu-toggle" aria-label="Öppna meny" />
+            <label for="menu-toggle" class="menu-toggle-label" aria-label="Menyknapp">
+                <span class="hamburger"></span>
+            </label>
             <nav class="header-nav" aria-label="Huvudnavigering">
                 <ul>
                     <li><a href="#hem">Hem</a></li>
@@ -33,6 +37,7 @@
             </div>
         </section>
         <section class="nyhetsbrev width-limit" aria-labelledby="newsletter-heading">
+            <div class="icon"><img src="assets/images/icon-planting.svg" alt="Nyhetsbrev Ikon" /></div>
             <div>
                 <h2 id="newsletter-heading">Anmäl dig till vårt nyhetsbrev så du inte missar en utsådd!</h2>
                 <form action="#" method="post" aria-labelledby="newsletter-heading">
@@ -40,7 +45,6 @@
                     <button type="submit">Skicka</button>
                 </form>
             </div>
-            <div class="icon"><img src="assets/images/icon-planting.svg" alt="Nyhetsbrev Ikon" /></div>
         </section>
         <section class="våra-växter width-limit" aria-labelledby="plants-heading">
             <h2 id="plants-heading">Alla våra växter</h2>
@@ -348,12 +352,12 @@
         </section>
 
         <section class="historik width-limit" aria-labelledby="history-heading">
-            <div class="icon"><img src="assets/images/icon-planting.svg" alt="Historik Ikon" /></div> 
             <div>
                 <h2 id="history-heading">Våra tidigare odlingar</h2>
                 <p>Under åren har vi genomfört flera gemensamma odlingsprojekt, från små stadsodlingar till större växthusinsatser. Här dokumenterar vi vad som fungerat och vad vi lärt oss.</p>
                 <button aria-label="Visa planterade plantor">Planterade plantor</button>
             </div>
+            <div class="icon"><img src="assets/images/icon-planting.svg" alt="Historik Ikon" /></div> 
         </section>
 
         <footer class="page-footer" role="contentinfo" aria-label="Sidfot">

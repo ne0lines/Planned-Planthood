@@ -76,7 +76,7 @@
     --card-radius: 1rem;
     --icon-padding: 30px;
     --avatar-size: 32px;
-    --gallery-row-height: 250px;
+    --gallery-row-height: 300px;
     --gallery-gap: 8px;
 }
 
@@ -188,6 +188,7 @@ h3 {
 ------------------------- */
 .width-limit{
     width:90%;
+    max-width:70rem;
     margin:0 auto;
 }
 
@@ -201,6 +202,11 @@ h3 {
     flex-direction: row; 
     align-items: center;
     justify-content: space-between;
+    /* Dölj hamburger-meny på desktop */
+    >input.menu-toggle,
+    >label.menu-toggle-label{
+        display: none;
+    }
     >a.site-logo{
         display:flex;
         align-items: center;
@@ -279,8 +285,8 @@ section.hero{
     }
     .gallery{
         position:relative;
-        width:100%;
         display:grid;
+        width:100%;
         padding:var(--spacing-base);
         border:1px solid var(--clr-primary-light-2);
         aspect-ratio: 16/9;
@@ -326,9 +332,9 @@ section.hero{
     Newsletter block
     - small signup area with icon and form
 ------------------------- */
-    section.nyhetsbrev{
+section.nyhetsbrev{
     display:flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
     align-items: center;
     justify-content: center;
     gap:calc(var(--spacing-base)*4);
@@ -528,7 +534,7 @@ section.våra-växter{
 ------------------------- */
 section.historik{
     display:flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
     align-items: center;
     justify-content: center;
     gap:calc(var(--spacing-base)*4);
@@ -582,6 +588,7 @@ section.historik{
 ------------------------- */
 main>footer.page-footer{
     height:100%;
+    width:100%;
     background-color:var(--clr-accent);
     color:var(--clr-neutral-100);
     padding:calc(var(--spacing-base)*2);
@@ -635,6 +642,7 @@ main>footer.page-footer{
         >nav.footer-menu{
             display:block;
             height:100%;
+            width:10%;
             >ul{
                 display:flex;
                 height:100%;
@@ -666,7 +674,6 @@ main>footer.page-footer{
 ------------------------- */
 @media (max-width: 1200px){
     .width-limit{
-        width:90%;
         max-width:900px;
     }
 }
@@ -675,16 +682,238 @@ main>footer.page-footer{
         width:95%;
         max-width:900px;
     }
+    section.hero>.gallery{
+        aspect-ratio: auto;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        >img{
+            aspect-ratio: 1/1 ;
+            &:nth-child(1){
+                grid-column: 1;
+                grid-row: 1;
+            }
+            &:nth-child(2){
+                grid-column: 2;
+                grid-row: 1;
+            }
+            &:nth-child(3){
+                grid-column: 3;
+                grid-row: 1;
+            }
+            &:nth-child(4){
+                grid-column: 1;
+                grid-row: 2;
+            }
+            &:nth-child(5){
+                grid-column: 2;
+                grid-row: 2;
+            }
+            &:nth-child(6){
+                grid-column: 3;
+                grid-row: 2;
+            }
+        }
+    }
+    section.nyhetsbrev{
+        width:70%;
+        >div{
+            width:70%;
+            >h2{
+                width:100%;
+            }
+            &.icon{
+                width:50%;
+            }
+        }
+    }
     section.våra-växter > div{
         grid-template-columns: repeat(3, minmax(10rem, 1fr));
+    }
+    section.historik{
+        width:70%;
+        >div{
+            width:70%;
+            >h2{
+                width:100%;
+            } 
+            &.icon{
+                width:50%;
+            }
+        }
+    }
+    footer.page-footer > div.width-limit {
+        >div.om-oss{
+            width:70%;
+        }
     }
 }
 @media (max-width: 600px){
     .width-limit{
-        width:100%;
+        width:90%;
         max-width:600px;
     }
+    main>header.site-header{
+        >input.menu-toggle{
+            display: none;
+        }
+        >label.menu-toggle-label{
+            position:absolute;
+            top:20px;
+            right:10px;
+            display:block;
+            cursor: pointer;
+            width:40px;
+            height:40px;
+            padding:8px 0;
+            margin:0;
+            z-index: 10;
+            >span.hamburger{
+                position: relative;
+                display: block;
+                width:100%;
+                height:4px;
+                background-color:var(--clr-accent);
+                border-radius:2px;
+                transition: background-color 0.5s ease;
+                &::before,
+                &::after{
+                    content:"";
+                    position: absolute;
+                    left:0;
+                    width:100%;
+                    height:4px;
+                    background-color:var(--clr-accent);
+                    border-radius:2px;
+                    transition: transform 0.5s ease, top 0.5s ease;
+                }
+                &::before{
+                    top:-10px;
+                }
+                &::after{
+                    top:10px;
+                }
+            }
+        }
+        /* När checkbox är ikryssad - ändra hamburger till X */
+        >input.menu-toggle:checked + label.menu-toggle-label >span.hamburger{
+            background-color: transparent;
+            &::before{
+                transform: rotate(45deg);
+                top:0;
+            }
+            &::after{
+                transform: rotate(-45deg);
+                top:0;
+            }
+        }
+        /* Dölj menyn som standard */
+        >nav.header-nav{
+            display: none;
+            >ul{
+                position:absolute;
+                top:var(--header-height);
+                right:0;
+                width:100%;
+                height:100vh;
+                flex-direction: column;
+                align-items: center;
+                background-color: rgba(255, 255, 255, 0.5);
+                backdrop-filter: blur(10px);
+                -webkit-backdrop-filter: blur(10px);
+                z-index: 1;
+                gap:0;
+                >li{
+                    width:100%;
+                    height:4rem;
+                    >a{
+                        width:100%;
+                        height:100%;
+                        justify-content: flex-end;
+                    }
+                }
+            }
+        }
+        /* Visa menyn när checkbox är ikryssad */
+        >input.menu-toggle:checked ~ nav.header-nav{
+            display: flex;
+        }
+    }
+    section.hero>.gallery{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        >img{
+            aspect-ratio: 1/1 ;
+            &:nth-child(1){
+                grid-column: 1;
+                grid-row: 1;
+            }
+            &:nth-child(2){
+                grid-column: 2;
+                grid-row: 1;
+            }
+            &:nth-child(3){
+                grid-column: 1;
+                grid-row: 2;
+            }
+            &:nth-child(4){
+                grid-column: 2;
+                grid-row: 2;
+            }
+            &:nth-child(5){
+                grid-column: 1;
+                grid-row: 3;
+            }
+            &:nth-child(6){
+                grid-column: 2;
+                grid-row: 3;
+            }
+        }
+    }
+    section.nyhetsbrev{
+        flex-direction: column;
+        >div{
+            width:90%;
+            text-align:center;
+            &.icon{
+                width:80%;
+            }
+        }
+    }
     section.våra-växter > div{
-        grid-template-columns: repeat(2, minmax(10rem, 1fr));
+        grid-template-columns: repeat(1, minmax(10rem, 1fr));
+    }
+    section.historik{
+        flex-direction: column-reverse;
+        align-items: center; 
+        >div{
+            width:90%;
+            text-align:center;
+            >h2{
+                width:100%;
+                text-align:center;
+            } 
+            >button{
+                align-self: center;
+            }
+            &.icon{
+                width:80%;
+            }
+        }
+    }
+
+    section.våra-växter > div {
+        grid-template-columns: repeat(1, minmax(10rem, 1fr));
+    }
+    main>footer.page-footer{
+        padding-left:calc(var(--spacing-base)/4);
+        padding-right:calc(var(--spacing-base)/4);
+        >div.width-limit {
+            >div.om-oss{
+                width:100%;
+            }
+            >nav.footer-menu{
+                visibility: hidden;
+            }
+        }
     }
 }
