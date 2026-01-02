@@ -1,134 +1,381 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Planned Planthood är en community för urbana odlare som delar kunskap, tips och erfarenheter om växter och odling i stadsmiljö." />
+    <title>Planned Planthood</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <main role="main">
+        <header class="site-header width-limit" role="banner">
+            <a href="/" class="site-logo">PLANNED PLANTHOOD</a>
+            <nav class="header-nav" aria-label="Huvudnavigering">
+                <ul>
+                    <li><a href="#hem">Hem</a></li>
+                    <li><a href="#historik">Historik</a></li>
+                    <li><a href="#tips">Tips</a></li>
+                    <li><a href="#kontakt">Kontakt</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section class="hero width-limit" aria-labelledby="hero-heading">
+            <h2 id="hero-heading">Våra uppskattade växter</h2>
+            <p>Vi odlar tillsammans, från frö till skörd. Här delar vi praktiska tips, sorter och erfarenheter för odling i kruka, balkong och trädgård.</p>
+            <div class="gallery">
+                <img src="assets/images/img-1.jpg" alt="Bild på växt" />
+                <img src="assets/images/img-2.jpg" alt="Bild på växt" />
+                <img src="assets/images/img-3.jpg" alt="Bild på växt" />
+                <img src="assets/images/img-4.jpg" alt="Bild på växt" />
+                <img src="assets/images/img-5.jpg" alt="Bild på växt" />
+                <img src="assets/images/img-6.jpg" alt="Bild på växt" />
+            </div>
+        </section>
+        <section class="nyhetsbrev width-limit" aria-labelledby="newsletter-heading">
+            <div>
+                <h2 id="newsletter-heading">Anmäl dig till vårt nyhetsbrev så du inte missar en utsådd!</h2>
+                <form action="#" method="post" aria-labelledby="newsletter-heading">
+                    <input type="email" name="email" placeholder="namn@domän.se" aria-label="E-postadress" required />
+                    <button type="submit">Skicka</button>
+                </form>
+            </div>
+            <div class="icon"><img src="assets/images/icon-planting.svg" alt="Nyhetsbrev Ikon" /></div>
+        </section>
+        <section class="våra-växter width-limit" aria-labelledby="plants-heading">
+            <h2 id="plants-heading">Alla våra växter</h2>
+            <div>
+                <article aria-labelledby="plant-01-title">
+                    <a href="/vaxter/gurka/"><img src="assets/images/plant-01.jpg" alt="Bild på växt: Gurka" /></a>
+                    <div class="meta-pills">
+                        <a href="/tags/atbart/">Ätbart</a>
+                        <a href="/tags/snabbvaxande/">Snabbväxande</a>
+                        <a href="/tags/lattodlat/">Lättodlat</a>
+                    </div>
+                    <a href="/vaxter/gurka/"><h3 id="plant-01-title">Gurka</h3></a>
+                    <p>Krispig och tacksam i kruka eller växthus, gillar jämn vattning och klätterstöd.</p>
+                    <footer>
+                        <a href="/profiles/alex/" title="Alexs profil">
+                            <img src="assets/images/icon-avatar.svg" alt="Profilbild" />
+                            <p>
+                                <b>Alex</b>
+                                <span>2024-04-01</span>
+                            </p>
+                        </a>
+                    </footer>
+                </article>
 
-    Planned Planthood
-    Meny
-    Hem
-    Historik
-    Tips
-    Kontakt
+                <article aria-labelledby="plant-02-title">
+                    <a href="/vaxter/korsbarstomat/"><img src="assets/images/plant-02.jpg" alt="Bild på växt: Körsbärstomat" /></a>
+                    <div class="meta-pills">
+                        <a href="/tags/atbart/">Ätbart</a>
+                        <a href="/tags/solalskande/">Solälskande</a>
+                        <a href="/tags/snabbvaxande/">Snabbväxande</a>
+                    </div>
+                    <a href="/vaxter/korsbarstomat/"><h3 id="plant-02-title">Körsbärstomat</h3></a>
+                    <p>Ger mycket skörd på liten yta, toppa, tjuva och ge näring regelbundet.</p>
+                    <footer>
+                        <a href="/profiles/samira/" title="Samiras profil">
+                            <img src="assets/images/icon-avatar.svg" alt="Profilbild" />
+                            <p>
+                                <b>Samira</b>
+                                <span>2024-04-12</span>
+                            </p>
+                        </a>
+                    </footer>
+                </article>
 
-    Våra uppskattade växter
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, ex vero harum recusandae et, nemo ea, non fugit sapiente sit dolore autem! Expedita illo deleniti maiores harum consequatur debitis hic.
+                <article aria-labelledby="plant-03-title">
+                    <a href="/vaxter/basilika/"><img src="assets/images/plant-03.jpg" alt="Bild på växt: Basilika" /></a>
+                    <div class="meta-pills">
+                        <a href="/tags/atbart/">Ätbart</a>
+                        <a href="/tags/dekorativ/">Dekorativ</a>
+                        <a href="/tags/lattodlat/">Lättodlat</a>
+                    </div>
+                    <a href="/vaxter/basilika/"><h3 id="plant-03-title">Basilika</h3></a>
+                    <p>Doftande köksfavorit som trivs varmt, plocka topparna ofta för buskigare plantor.</p>
+                    <footer>
+                        <a href="/profiles/kim/" title="Kims profil">
+                            <img src="assets/images/icon-avatar.svg" alt="Profilbild" />
+                            <p>
+                                <b>Kim</b>
+                                <span>2024-05-03</span>
+                            </p>
+                        </a>
+                    </footer>
+                </article>
 
-    Anmäl dig till vårt nyhetsbrev så du inte missar en utsådd!
-    Skicka
+                <article aria-labelledby="plant-04-title">
+                    <a href="/vaxter/monstera/"><img src="assets/images/plant-04.jpg" alt="Bild på växt: Monstera" /></a>
+                    <div class="meta-pills">
+                        <a href="/tags/gronska/">Grönska</a>
+                        <a href="/tags/talig/">Tålig</a>
+                        <a href="/tags/dekorativ/">Dekorativ</a>
+                    </div>
+                    <a href="/vaxter/monstera/"><h3 id="plant-04-title">Monstera</h3></a>
+                    <p>Storbladig klassiker som gillar ljust utan direkt sol, vattna när jorden torkar upp.</p>
+                    <footer>
+                        <a href="/profiles/elin/" title="Elins profil">
+                            <img src="assets/images/icon-avatar.svg" alt="Profilbild" />
+                            <p>
+                                <b>Elin</b>
+                                <span>2024-05-18</span>
+                            </p>
+                        </a>
+                    </footer>
+                </article>
 
-    Alla våra växter
+                <article aria-labelledby="plant-05-title">
+                    <a href="/vaxter/fredskalla/"><img src="assets/images/plant-05.jpg" alt="Bild på växt: Fredskalla" /></a>
+                    <div class="meta-pills">
+                        <a href="/tags/blommor/">Blommor</a>
+                        <a href="/tags/luftfuktande/">Luftfuktande</a>
+                        <a href="/tags/lattodlat/">Lättodlat</a>
+                    </div>
+                    <a href="/vaxter/fredskalla/"><h3 id="plant-05-title">Fredskalla</h3></a>
+                    <p>Trivs i halvskugga och gillar fuktig jord, belönar med vita blommor nästan året runt.</p>
+                    <footer>
+                        <a href="/profiles/noah/" title="Noahs profil">
+                            <img src="assets/images/icon-avatar.svg" alt="Profilbild" />
+                            <p>
+                                <b>Noah</b>
+                                <span>2024-06-02</span>
+                            </p>
+                        </a>
+                    </footer>
+                </article>
 
-    Gurka
-    Blommor
-    Ätbart
-    Grönska
-    Gurka växer snabbt, är enkel att odla och ger mängder med gurkor, bara man är noga med vattning,
-    omplantering,
-    duschning och gödsling.
-    Coolio
-    2024-04-01
+                <article aria-labelledby="plant-06-title">
+                    <a href="/vaxter/aloe-vera/"><img src="assets/images/plant-06.jpg" alt="Bild på växt: Aloe vera" /></a>
+                    <div class="meta-pills">
+                        <a href="/tags/talig/">Tålig</a>
+                        <a href="/tags/solalskande/">Solälskande</a>
+                        <a href="/tags/dekorativ/">Dekorativ</a>
+                    </div>
+                    <a href="/vaxter/aloe-vera/"><h3 id="plant-06-title">Aloe vera</h3></a>
+                    <p>Succulent som vill torka upp mellan vattningarna, perfekt för dig som ofta glömmer.</p>
+                    <footer>
+                        <a href="/profiles/viktor/" title="Viktors profil">
+                            <img src="assets/images/icon-avatar.svg" alt="Profilbild" />
+                            <p>
+                                <b>Viktor</b>
+                                <span>2024-06-15</span>
+                            </p>
+                        </a>
+                    </footer>
+                </article>
 
-    Tomat
-    Solälskande
-    Lättodlat
-    Ätbart
-    En perfekt grönsak att odla på balkongen eller i trädgården. Ger riklig skörd under sommaren.
-    Anna Odlare
-    2024-12-05
+                <article aria-labelledby="plant-07-title">
+                    <a href="/vaxter/lavendel/"><img src="assets/images/plant-07.jpg" alt="Bild på växt: Lavendel" /></a>
+                    <div class="meta-pills">
+                        <a href="/tags/fargstark/">Färgstark</a>
+                        <a href="/tags/solalskande/">Solälskande</a>
+                        <a href="/tags/talig/">Tålig</a>
+                    </div>
+                    <a href="/vaxter/lavendel/"><h3 id="plant-07-title">Lavendel</h3></a>
+                    <p>Doftande och dekorativ, vill stå soligt och ha väldränerad jord för att må som bäst.</p>
+                    <footer>
+                        <a href="/profiles/maja/" title="Majas profil">
+                            <img src="assets/images/icon-avatar.svg" alt="Profilbild" />
+                            <p>
+                                <b>Maja</b>
+                                <span>2024-07-01</span>
+                            </p>
+                        </a>
+                    </footer>
+                </article>
 
-    Pelargon
-    Dekorativ
-    Färgstark
-    Tålig
-    Blommor
-    En vacker och lättskött blomma som trivs både inne och ute under sommaren.
-    Blomsterkalle
-    2024-12-03
+                <article aria-labelledby="plant-08-title">
+                    <a href="/vaxter/pelargon/"><img src="assets/images/plant-08.jpg" alt="Bild på växt: Pelargon" /></a>
+                    <div class="meta-pills">
+                        <a href="/tags/blommor/">Blommor</a>
+                        <a href="/tags/fargstark/">Färgstark</a>
+                        <a href="/tags/lattodlat/">Lättodlat</a>
+                    </div>
+                    <a href="/vaxter/pelargon/"><h3 id="plant-08-title">Pelargon</h3></a>
+                    <p>Sommarfavorit som blommar länge, nyp bort vissna blommor så fortsätter den leverera.</p>
+                    <footer>
+                        <a href="/profiles/oskar/" title="Oskars profil">
+                            <img src="assets/images/icon-avatar.svg" alt="Profilbild" />
+                            <p>
+                                <b>Oskar</b>
+                                <span>2024-07-18</span>
+                            </p>
+                        </a>
+                    </footer>
+                </article>
 
-    Basilika
-    Dekorativ
-    Färgstark
-    Tålig
-    En fantastisk krydda för pastarätter och sallader. Trivs bäst i ett soligt fönster.
-    Krydd-Malin
-    2024-12-07
+                <article aria-labelledby="plant-09-title">
+                    <a href="/vaxter/svarmorstunga/"><img src="assets/images/plant-09.jpg" alt="Bild på växt: Svärmorstunga" /></a>
+                    <div class="meta-pills">
+                        <a href="/tags/talig/">Tålig</a>
+                        <a href="/tags/gronska/">Grönska</a>
+                        <a href="/tags/lattodlat/">Lättodlat</a>
+                    </div>
+                    <a href="/vaxter/svarmorstunga/"><h3 id="plant-09-title">Svärmorstunga</h3></a>
+                    <p>Riktigt lättskött och tålig, klarar både ljus och skugga, och gillar sparsam vattning.</p>
+                    <footer>
+                        <a href="/profiles/lina/" title="Linas profil">
+                            <img src="assets/images/icon-avatar.svg" alt="Profilbild" />
+                            <p>
+                                <b>Lina</b>
+                                <span>2024-08-05</span>
+                            </p>
+                        </a>
+                    </footer>
+                </article>
 
-    Sallad
-    Snabbväxande
-    Ätbart
-    Grönska
-    Sallad är en av de enklaste grönsakerna att odla och ger snabba resultat för färska måltider.
-    Grönis
-    2024-12-06
+                <article aria-labelledby="plant-10-title">
+                    <a href="/vaxter/gullranka/"><img src="assets/images/plant-10.jpg" alt="Bild på växt: Gullranka" /></a>
+                    <div class="meta-pills">
+                        <a href="/tags/gronska/">Grönska</a>
+                        <a href="/tags/luftfuktande/">Luftfuktande</a>
+                        <a href="/tags/talig/">Tålig</a>
+                    </div>
+                    <a href="/vaxter/gullranka/"><h3 id="plant-10-title">Gullranka</h3></a>
+                    <p>Hänger fint i ampel och växer snabbt, klipp och sticklingsföröka för ännu mer grönska.</p>
+                    <footer>
+                        <a href="/profiles/farah/" title="Farahs profil">
+                            <img src="assets/images/icon-avatar.svg" alt="Profilbild" />
+                            <p>
+                                <b>Farah</b>
+                                <span>2024-08-22</span>
+                            </p>
+                        </a>
+                    </footer>
+                </article>
 
-    Ormbunke
-    Luftfuktande
-    Grönska
-    Dekorativ
-    En klassisk växt som passar perfekt i badrummet eller på skuggiga platser.
-    Naturvännen
-    2024-12-08
+                <article aria-labelledby="plant-11-title">
+                    <a href="/vaxter/orkide/"><img src="assets/images/plant-11.jpg" alt="Bild på växt: Orkidé" /></a>
+                    <div class="meta-pills">
+                        <a href="/tags/blommor/">Blommor</a>
+                        <a href="/tags/dekorativ/">Dekorativ</a>
+                        <a href="/tags/fargstark/">Färgstark</a>
+                    </div>
+                    <a href="/vaxter/orkide/"><h3 id="plant-11-title">Orkidé</h3></a>
+                    <p>Elegant blomning med rätt rutin, doppa rötterna ibland och låt den sedan rinna av.</p>
+                    <footer>
+                        <a href="/profiles/johan/" title="Johans profil">
+                            <img src="assets/images/icon-avatar.svg" alt="Profilbild" />
+                            <p>
+                                <b>Johan</b>
+                                <span>2024-09-04</span>
+                            </p>
+                        </a>
+                    </footer>
+                </article>
 
-    Gurka
-    Blommor
-    Ätbart
-    Grönska
-    Gurka växer snabbt, är enkel att odla och ger mängder med gurkor, bara man är noga med vattning,
-    omplantering,
-    duschning och gödsling.
-    Coolio
-    2024-04-01
+                <article aria-labelledby="plant-12-title">
+                    <a href="/vaxter/kaktus/"><img src="assets/images/plant-12.jpg" alt="Bild på växt: Kaktus" /></a>
+                    <div class="meta-pills">
+                        <a href="/tags/talig/">Tålig</a>
+                        <a href="/tags/solalskande/">Solälskande</a>
+                        <a href="/tags/dekorativ/">Dekorativ</a>
+                    </div>
+                    <a href="/vaxter/kaktus/"><h3 id="plant-12-title">Kaktus</h3></a>
+                    <p>Minimal skötsel och maximal karaktär, låt jorden torka ut ordentligt mellan gångerna.</p>
+                    <footer>
+                        <a href="/profiles/tilde/" title="Tildes profil">
+                            <img src="assets/images/icon-avatar.svg" alt="Profilbild" />
+                            <p>
+                                <b>Tilde</b>
+                                <span>2024-09-19</span>
+                            </p>
+                        </a>
+                    </footer>
+                </article>
 
-    Tomat
-    Solälskande
-    Lättodlat
-    Ätbart
-    En perfekt grönsak att odla på balkongen eller i trädgården. Ger riklig skörd under sommaren.
-    Anna Odlare
-    2024-12-05
+                <article aria-labelledby="plant-13-title">
+                    <a href="/vaxter/spenat/"><img src="assets/images/plant-13.jpg" alt="Bild på växt: Spenat" /></a>
+                    <div class="meta-pills">
+                        <a href="/tags/atbart/">Ätbart</a>
+                        <a href="/tags/snabbvaxande/">Snabbväxande</a>
+                        <a href="/tags/lattodlat/">Lättodlat</a>
+                    </div>
+                    <a href="/vaxter/spenat/"><h3 id="plant-13-title">Spenat</h3></a>
+                    <p>Snabb skörd för sallad och matlagning, så om i omgångar för jämn tillgång.</p>
+                    <footer>
+                        <a href="/profiles/robin/" title="Robins profil">
+                            <img src="assets/images/icon-avatar.svg" alt="Profilbild" />
+                            <p>
+                                <b>Robin</b>
+                                <span>2024-10-02</span>
+                            </p>
+                        </a>
+                    </footer>
+                </article>
 
-    Pelargon
-    Dekorativ
-    Färgstark
-    Tålig
-    Blommor
-    En vacker och lättskött blomma som trivs både inne och ute under sommaren.
-    Blomsterkalle
-    2024-12-03
+                <article aria-labelledby="plant-14-title">
+                    <a href="/vaxter/jordgubbe/"><img src="assets/images/plant-14.jpg" alt="Bild på växt: Jordgubbe" /></a>
+                    <div class="meta-pills">
+                        <a href="/tags/atbart/">Ätbart</a>
+                        <a href="/tags/snabbvaxande/">Snabbväxande</a>
+                        <a href="/tags/solalskande/">Solälskande</a>
+                    </div>
+                    <a href="/vaxter/jordgubbe/"><h3 id="plant-14-title">Jordgubbe</h3></a>
+                    <p>Söt och somrig, trivs i sol och ger bäst bär med jämn fukt och lite näring.</p>
+                    <footer>
+                        <a href="/profiles/sara/" title="Saras profil">
+                            <img src="assets/images/icon-avatar.svg" alt="Profilbild" />
+                            <p>
+                                <b>Sara</b>
+                                <span>2024-10-18</span>
+                            </p>
+                        </a>
+                    </footer>
+                </article>
 
-    Basilika
-    Dekorativ
-    Färgstark
-    Tålig
-    En fantastisk krydda för pastarätter och sallader. Trivs bäst i ett soligt fönster.
-    Krydd-Malin
-    2024-12-07
+                <article aria-labelledby="plant-15-title">
+                    <a href="/vaxter/rosmarin/"><img src="assets/images/plant-15.jpg" alt="Bild på växt: Rosmarin" /></a>
+                    <div class="meta-pills">
+                        <a href="/tags/atbart/">Ätbart</a>
+                        <a href="/tags/talig/">Tålig</a>
+                        <a href="/tags/solalskande/">Solälskande</a>
+                    </div>
+                    <a href="/vaxter/rosmarin/"><h3 id="plant-15-title">Rosmarin</h3></a>
+                    <p>Vedartad krydda som gillar sol och väldränerat, låt torka upp och klipp försiktigt.</p>
+                    <footer>
+                        <a href="/profiles/emil/" title="Emils profil">
+                            <img src="assets/images/icon-avatar.svg" alt="Profilbild" />
+                            <p>
+                                <b>Emil</b>
+                                <span>2024-11-03</span>
+                            </p>
+                        </a>
+                    </footer>
+                </article>
+            </div>
+        </section>
 
-    Sallad
-    Snabbväxande
-    Ätbart
-    Grönska
-    Sallad är en av de enklaste grönsakerna att odla och ger snabba resultat för färska måltider.
-    Grönis
-    2024-12-06
+        <section class="historik width-limit" aria-labelledby="history-heading">
+            <div class="icon"><img src="assets/images/icon-planting.svg" alt="Historik Ikon" /></div> 
+            <div>
+                <h2 id="history-heading">Våra tidigare odlingar</h2>
+                <p>Under åren har vi genomfört flera gemensamma odlingsprojekt, från små stadsodlingar till större växthusinsatser. Här dokumenterar vi vad som fungerat och vad vi lärt oss.</p>
+                <button aria-label="Visa planterade plantor">Planterade plantor</button>
+            </div>
+        </section>
 
-    Ormbunke
-    Luftfuktande
-    Grönska
-    Dekorativ
-    En klassisk växt som passar perfekt i badrummet eller på skuggiga platser.
-    Naturvännen
-    2024-12-08
-
-    Våra tidigare odlingar
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur ratione quia eos pariatur deserunt veritatis. Tenetur, ipsum! Iusto delectus ipsam esse pariatur rerum eveniet nostrum, dolor distinctio nam quaerat doloribus?
-
-    Planterade plantor
-
-    Om oss
-    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque, veniam ducimus aut sint atque ullam alias perspiciatis fuga. Consequuntur nesciunt ea corrupti aperiam fugit inventore ratione earum. Iure, eius molestias?
-
-    Telefon: 020-1234567
-    E-post: info@plannedplant.com
-
-    Hem
-    Historik
-    Tips
-    Kontakt
- 
+        <footer class="page-footer" role="contentinfo" aria-label="Sidfot">
+            <div class="width-limit">
+                <div class="om-oss">
+                    <h2>Om oss</h2>
+                    <p>Planned Planthood är en ideell community för urbana odlare. Vi delar kunskap, evenemang och resurser för att göra odling enklare och roligare, en planta i taget.</p>
+                    <p>
+                        <span>Telefon: <a href="tel:020-1234567">020-1234567</a></span>
+                        <span>E-post: <a href="mailto:info@plannedplant.com">info@plannedplant.com</a></span>
+                    </p>
+                </div>
+                <nav class="footer-menu" aria-label="Sidfotsmeny">
+                    <ul>
+                        <li><a href="#hem">Hem</a></li>
+                        <li><a href="#historik">Historik</a></li>
+                        <li><a href="#tips">Tips</a></li>
+                        <li><a href="#kontakt">Kontakt</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </footer>
+    </main>
+</body>
+</html>
