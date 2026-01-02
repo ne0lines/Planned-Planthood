@@ -771,6 +771,11 @@ main>footer.page-footer{
         >input.menu-toggle{
             display: none;
         }
+
+        /*
+            Credit till Petra Paulin som inspirerat till animationen på menyn
+                                                                                */
+
         >label.menu-toggle-label{
             position:absolute;
             top:15px;
